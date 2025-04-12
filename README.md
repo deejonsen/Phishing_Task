@@ -1,14 +1,13 @@
-# Phishing_Task
 
 # Human Weakness Exploitation Simulation via BeEF & GoPhish  
-**A controlled phishing and post-exploitation demonstration for educational purposes**  
+## **A Controlled Phishing and Post-Exploitation Demonstration for Educational Purposes**  
 
 ---
 
 ## 📜 Overview  
 This repository documents a lab simulation of a phishing campaign paired with browser exploitation using **GoPhish** (phishing framework) and **BeEF** (Browser Exploitation Framework). The project demonstrates how attackers exploit human behavior and technical vulnerabilities, while emphasizing defense strategies.  
 
-**Key Focus Areas:**  
+### **Key Focus Areas:**  
 - Phishing email/landing page design  
 - Browser hooking and post-click exploitation  
 - Ethical attack simulation metrics  
@@ -29,90 +28,104 @@ This repository documents a lab simulation of a phishing campaign paired with br
 
 ## ⚠️ Prerequisites  
 - **Virtualization Software:** VMware/VirtualBox (for Kali Linux and Metasploitable VMs).  
-- **Kali Linux VM:** Pre-installed tools:  
+- **Kali Linux VM:** Pre-installed tools:
+
   ```bash  
-  # BeEF Installation  
-  sudo apt install beef-xss  
-  # GoPhish (Download binary from GitHub)  
-  wget https://github.com/gophish/gophish/releases/download/v0.12.1/gophish-v0.12.1-linux-64bit.zip
+  sudo apt install beef-xss       # BeEF Installation 
+  wget https://github.com/gophish/gophish/releases/download/v0.12.1/gophish-v0.12.1-linux-64bit.zip 
   ```
-Ethical Boundaries:
+
+### Ethical Boundaries:
 
 Only test on consented users or lab machines.
 
 No real data exfiltration or destructive actions.
 
-🛠️ Installation
-Clone the Repository:
+---
 
-bash
-Copy
-git clone https://github.com/yourusername/human-exploit-sim.git  
-cd human-exploit-sim  
-Set Up GoPhish:
+## 🛠️ Installation
 
-Unzip the GoPhish binary and configure config.json for your lab IP.
+- Clone the Repository:
 
-Configure BeEF:
+```bash
+git clone https://github.com/gophish/gophish/releases/download/v0.12.1/gophish-v0.12.1-linux-64bit.zip 
+```
 
-Edit /usr/share/beef-xss/config.yaml to bind to your Kali IP.
+- Set Up GoPhish:
 
-Import Templates:
+Unzip the GoPhish binary and configure `config.json` for your lab IP.
+```
+unzip gophish-v0.12.1-linux-64bit.zip 
+```
+- Configure BeEF:
 
-Copy email/landing page templates from GoPhish-Templates/ to GoPhish dashboard.
+Edit `/usr/share/beef-xss/config.yaml` to bind to your Kali IP.
 
-� Usage
-Step 1: Launch GoPhish Campaign
-Start GoPhish:
+- Import Templates:
 
-bash
-Copy
+Copy email/landing page templates from `GoPhish-Templates/` to GoPhish dashboard.
+
+## � Usage
+### Step 1: Launch GoPhish Campaign
+- Start GoPhish:
+
+```bash
 ./gophish  
-Upload target list (see Metrics/sample_targets.csv).
+```
 
-Schedule the campaign with the BeEF-hooked landing page.
+- Upload target list (see `Metrics/sample_targets.csv`).
 
-Step 2: Monitor BeEF Sessions
-Start BeEF:
+- Schedule the campaign with the BeEF-hooked landing page.
 
-bash
-Copy
-beef-xss  
-Execute demo commands on hooked browsers (e.g., fake alerts, fingerprinting).
+### Step 2: Monitor BeEF Sessions
+- Start BeEF:
 
-Step 3: Analyze Metrics
-Review GoPhish campaign data in Results/.
+```bash
+sudo beef-xss  
+```
+- Execute demo commands on hooked browsers (e.g., fake alerts, fingerprinting).
 
-Export BeEF logs for hooked session details.
+### Step 3: Analyze Metrics
+- Review GoPhish campaign data in `Results/`.
 
-🛡️ Prevention Guidelines
-For Users:
-Verify sender addresses and URLs before clicking.
+- Export BeEF logs for hooked session details.
 
-Use script-blocking browser extensions (e.g., uBlock Origin).
+---
 
-For Organizations:
-Deploy email authentication (DMARC/DKIM/SPF).
+## 🛡️ Prevention Guidelines
+### For Users:
+- Verify sender addresses and URLs before clicking.
 
-Monitor traffic to suspicious endpoints (e.g., :3000/hook.js).
+- Use script-blocking browser extensions (e.g., uBlock Origin).
 
+### For Organizations:
+- Deploy email authentication (DMARC/DKIM/SPF).
 
-🤝 Contributing
+- Monitor traffic to suspicious endpoints (e.g., :3000/hook.js).
+
+---
+
+## 🤝 Contributing
 This project is for educational purposes only. Contributions must adhere to:
 
-Strict ethical testing guidelines.
+- Strict ethical testing guidelines.
 
-No real-world phishing or unauthorized exploitation.
+- No real-world phishing or unauthorized exploitation.
 
-📄 License
-MIT License - Use responsibly and only in controlled environments.
+## 📄 License
+### MIT License - Use responsibly and only in controlled environments.
 
-🔗 Resources
-GoPhish Documentation
+## 🔗 Resources
+- [GoPhish Documentation](https://docs.getgophish.com/user-guide)
+- [BeEF Framework Wiki](https://github.com/beefproject/beef/wiki)
+- [CISA Phishing Guidance](https://www.cisa.gov/phishing)
 
-BeEF Framework Wiki
-
-CISA Phishing Guidance
-
-⚠️ Disclaimer: This project simulates attacks to improve cybersecurity awareness. Never use these techniques maliciously.
+#### ⚠️ Disclaimer: This project simulates attacks to improve cybersecurity awareness. Never use these techniques maliciously.
   
+## Author: Dorcas Johnson
+
+Date: 11th April, 2025
+
+Purpose: Educational demonstration of a Controlled Phishing and Post-Exploitation.
+
+---
