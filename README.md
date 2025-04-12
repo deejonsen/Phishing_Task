@@ -120,12 +120,16 @@ This project is for educational purposes only. Contributions must adhere to:
 - [BeEF Framework Wiki](https://github.com/beefproject/beef/wiki)
 - [CISA Phishing Guidance](https://www.cisa.gov/phishing)
 
-#### ⚠️ Disclaimer: This project simulates attacks to improve cybersecurity awareness. Never use these techniques maliciously.
+
+---
   
-## Author: Dorcas Johnson
+### Author: Dorcas Johnson
 
-Date: 11th April, 2025
+**Date:** 12th April, 2025
 
-Purpose: Educational demonstration of a Controlled Phishing and Post-Exploitation.
+**Purpose:** Educational demonstration of a Controlled Phishing and Post-Exploitation.
+
+**⚠️ Disclaimer:** This project simulates attacks to improve cybersecurity awareness. Never use these techniques maliciously.
+
 
 ---
